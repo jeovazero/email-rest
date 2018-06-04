@@ -7,12 +7,13 @@ const MONGO_URL = process.env.MONGO_URL
 const jwt = require('jsonwebtoken');
 
 const SECRET = process.env.SECRET
+console.log(MONGO_URL)
 
 mongoose.connect(MONGO_URL)
 
 function getBox(req, res, typebox){
     let email = req.user
-            
+
     User.findOne({email: email})
     .then( user => {
         if( user ){
