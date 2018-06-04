@@ -9,7 +9,13 @@ const jwt = require('jsonwebtoken');
 const SECRET = process.env.SECRET
 console.log(MONGO_URL)
 
-mongoose.connect(MONGO_URL)
+mongoose.connect(MONGO_URL, function (err, res) {
+    if (err) {
+        console.log ('ERROR connecting to: ' + MONGO_URL + '. ' + err);
+    } else {
+        console.log ('Succeeded connected to: ' + MONGO_URL);
+    }
+})
 
 function getBox(req, res, typebox){
     let email = req.user
