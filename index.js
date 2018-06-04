@@ -50,6 +50,11 @@ server.get("/", function(req, res, next){
     return next()
 })
 
+server.get("/hello/:name", function(req, res, next){
+    res.send("Hello " + req.params.name)
+    return next()
+})
+
 server.listen(PORT, function(){
     console.log("Pode cunfiar tiu aqui noiz faiz servidor")
 })
