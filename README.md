@@ -3,3 +3,4 @@
 To do:
 - detailed readme
 - some improvements
+- api documentation
