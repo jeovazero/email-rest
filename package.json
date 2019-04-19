@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon -r dotenv/config index.js",
-    "test": "jest"
+    "test": "jest",
+    "lint:fix": "standard '**/*.js' --fix",
+    "prettier": "prettier-standard '**/*.js'"
   },
   "repository": {
     "type": "git",
@@ -30,7 +32,9 @@
   "homepage": "https://github.com/jeovazero/simple-email-rest#readme",
   "devDependencies": {
     "dotenv": "^6.0.0",
-    "nodemon": "^1.17.5"
+    "nodemon": "^1.17.5",
+    "prettier-standard": "^9.1.1",
+    "standard": "^12.0.1"
   },
   "dependencies": {
     "argon2": "^0.19.3",
